@@ -1,12 +1,12 @@
 import redis
 import geojson as gj
-from pprint import pprint
 
 def test_tile38():
     client = redis.Redis(host='127.0.0.1', port=9851)
     # insert data
     for p in _get_points():
-        client.execute_command('SET', 'fleet', 'v', 'POINT', p['coords'][0], p['coords'][1], p['timestamp'])
+        client.execute_command('SET', 'fleet', 'v', 'FIELD', 'timestamp',  str(p['timestamp']),
+        'POINT', p['coords'][0], p['coords'][1], int(p['timestamp']))
 
     # get data
     #print(client.execute_command('GET', 'fleet', 'v'))

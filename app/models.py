@@ -19,5 +19,5 @@ class Event(BaseModel):
 
     def __str__(self):
         tstamp = datetime.utcfromtimestamp(self.object.coordinates[2]).strftime('%Y-%m-%d %H:%M:%S')
-        return 'detect: {}, lat: {}, lon: {}, timestamp: {}'.format(
-            self.detect, self.object.coordinates[0], self.object.coordinates[1], tstamp)
+        return 'detect: {}, lat: {}, lon: {}, timestamp: {} ({})'.format(
+            self.detect, self.object.coordinates[0], self.object.coordinates[1], tstamp, self.object.coordinates[2])
