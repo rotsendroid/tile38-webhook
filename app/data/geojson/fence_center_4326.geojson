@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "fence_center_4326",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "event": "center" }, "geometry": { "type": "Point", "coordinates": [ 23.606747418144149, 37.928603805154083 ] } }
+]
+}
